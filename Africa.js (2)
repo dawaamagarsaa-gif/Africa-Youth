@@ -1,0 +1,154 @@
+// ==========================================
+// AFRICA YOUTH RESEARCH
+// Main JavaScript
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Welcome message in browser console
+    console.log("Africa Youth Research website loaded successfully.");
+
+    // Smooth navigation
+    const navLinks = document.querySelectorAll("a[href]");
+
+    navLinks.forEach(function (link) {
+
+        link.addEventListener("click", function (event) {
+
+            const target = link.getAttribute("href");
+
+            // Only handle links to sections on the same page
+            if (target && target.startsWith("#")) {
+
+                const section = document.querySelector(target);
+
+                if (section) {
+                    event.preventDefault();
+
+                    section.scrollIntoView({
+                        behavior: "smooth"
+                    });
+                }
+            }
+        });
+
+    });
+
+
+    // Research card animation
+    const cards = document.querySelectorAll(".research-card");
+
+    const observer = new IntersectionObserver(
+        function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+
+    cards.forEach(function (card) {
+
+        card.style.opacity = "0";
+        card.style.transform = "translateY(25px)";
+        card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+
+        observer.observe(card);
+
+    });
+
+
+    // Current year automatically updates
+    const yearElements = document.querySelectorAll(".current-year");
+
+    yearElements.forEach(function (element) {
+        element.textContent = new Date().getFullYear();
+    });
+
+
+    // Simple mobile menu preparation
+    const header = document.querySelector(".header");
+
+    if (header) {
+        console.log("Navigation system ready.");
+    }
+
+});
+// =====================================================
+// COUNTRY SEARCH
+// =====================================================
+
+const countrySearch = document.getElementById("countrySearch");
+const countryGrid = document.getElementById("countryGrid");
+
+if (countrySearch && countryGrid) {
+
+    countrySearch.addEventListener("input", function () {
+
+        const searchText = countrySearch.value
+            .toLowerCase()
+            .trim();
+
+        const countries = countryGrid.querySelectorAll(".country-card");
+
+        let visibleCountries = 0;
+
+        countries.forEach(function (country) {
+
+            const countryName = country
+                .querySelector("h3")
+                .textContent
+                .toLowerCase();
+
+            if (countryName.includes(searchText)) {
+
+                country.style.display = "";
+
+                visibleCountries++;
+
+            } else {
+
+                country.style.display = "none";
+
+            }
+
+        });
+
+
+        // Remove previous message
+        const oldMessage = countryGrid.querySelector(".no-country");
+
+        if (oldMessage) {
+            oldMessage.remove();
+        }
+
+
+        // Show message when nothing is found
+        if (visibleCountries === 0) {
+
+            const message = document.createElement("div");
+
+            message.className = "no-country";
+
+            message.textContent =
+                "No country found. Try another search.";
+
+            countryGrid.appendChild(message);
+
+        }
+
+    });
+
+}
