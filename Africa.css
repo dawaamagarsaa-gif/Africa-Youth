@@ -1,0 +1,748 @@
+/* =====================================================
+   AFRICA YOUTH RESEARCH
+   Main Website Styles
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f9f6;
+    color: #17231b;
+    line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+    width: 100%;
+    min-height: 78px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e9e5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo span {
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo small {
+    margin-top: 5px;
+    font-size: 10px;
+    color: #637066;
+    letter-spacing: 1.5px;
+}
+
+.navbar {
+    display: flex;
+    gap: 26px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #35423a;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #1f7a45;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-btn,
+.signup-btn {
+    text-decoration: none;
+    padding: 9px 17px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.login-btn {
+    color: #1f7a45;
+    border: 1px solid #1f7a45;
+}
+
+.signup-btn {
+    color: #ffffff;
+    background: #1f7a45;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 650px;
+    padding: 80px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    background:
+        radial-gradient(circle at 85% 20%, #dcefe1 0, transparent 30%),
+        linear-gradient(135deg, #f7faf7, #edf5ef);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-label {
+    color: #1f7a45;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(44px, 6vw, 78px);
+    line-height: 1.02;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span,
+.section-title span,
+.why-text span,
+.cta span {
+    color: #1f7a45;
+}
+
+.hero-text {
+    max-width: 570px;
+    color: #59645d;
+    font-size: 18px;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 13px 23px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #1f7a45;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #155c34;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    border: 1px solid #aeb9b0;
+    color: #26352b;
+    background: white;
+}
+
+.secondary-btn:hover {
+    border-color: #1f7a45;
+}
+
+/* ================= HERO VISUAL ================= */
+
+.hero-visual {
+    width: 420px;
+    height: 420px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.africa-circle {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background:
+        linear-gradient(145deg, #1f7a45, #103d25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 25px 60px rgba(22, 70, 40, 0.2);
+}
+
+.africa-circle span {
+    color: white;
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.stat-card {
+    position: absolute;
+    background: white;
+    padding: 17px 20px;
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.09);
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-card strong {
+    color: #1f7a45;
+    font-size: 19px;
+}
+
+.stat-card small {
+    color: #68736c;
+    max-width: 150px;
+    line-height: 1.3;
+}
+
+.card-one {
+    top: 20px;
+    left: 0;
+}
+
+.card-two {
+    bottom: 25px;
+    right: 0;
+}
+
+/* ================= GENERAL SECTIONS ================= */
+
+section {
+    padding: 90px 7%;
+}
+
+.section-title {
+    max-width: 720px;
+}
+
+.section-title > p {
+    color: #1f7a45;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-title h2 {
+    font-size: clamp(32px, 4vw, 50px);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.center {
+    text-align: center;
+    margin: 0 auto 50px;
+}
+
+/* ================= MISSION ================= */
+
+.mission {
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.mission-content {
+    color: #59645d;
+    font-size: 17px;
+}
+
+.mission-content p + p {
+    margin-top: 18px;
+}
+
+/* ================= RESEARCH ================= */
+
+.research {
+    background: #f7f9f6;
+}
+
+.research-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.research-card {
+    background: white;
+    padding: 30px;
+    border: 1px solid #e4e9e4;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.research-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(30, 70, 45, 0.08);
+}
+
+.icon {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.research-card h3 {
+   /* =====================================================
+   RESEARCH PAGE
+   ===================================================== */
+
+/* ================= RESEARCH HERO ================= */
+
+.research-hero {
+    min-height: 500px;
+    padding: 90px 7%;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 85% 30%, #dcefe1, transparent 32%),
+        linear-gradient(135deg, #f7faf7, #edf5ef);
+}
+
+.research-hero > div {
+    max-width: 850px;
+}
+
+.research-hero h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+}
+
+.research-hero h1 span {
+    color: #1f7a45;
+}
+
+.research-hero p:not(.hero-label) {
+    max-width: 700px;
+    color: #59645d;
+    font-size: 18px;
+}
+
+
+/* ================= BIG QUESTION ================= */
+
+.big-question {
+    background: white;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.big-question .section-title h2 {
+    font-size: clamp(32px, 4vw, 55px);
+}
+
+.question-text {
+    color: #59645d;
+    font-size: 17px;
+}
+
+.question-text p + p {
+    margin-top: 20px;
+}
+
+
+/* ================= KEY FACTS ================= */
+
+.key-facts {
+    background: #f7f9f6;
+}
+
+.facts-grid {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.fact-card {
+    background: white;
+    padding: 35px 30px;
+    border-radius: 14px;
+    border: 1px solid #e2e8e3;
+    transition: 0.3s ease;
+}
+
+.fact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(30, 70, 45, 0.08);
+}
+
+.fact-card strong {
+    display: block;
+    color: #1f7a45;
+    font-size: 42px;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.fact-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.fact-card p {
+    color: #68736c;
+    font-size: 14px;
+}
+
+.data-note {
+    max-width: 900px;
+    margin: 25px auto 0;
+    text-align: center;
+    color: #7a847d;
+    font-size: 12px;
+}
+
+
+/* ================= RESEARCH TOPICS ================= */
+
+.research-topics {
+    background: white;
+}
+
+.topic-grid {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.topic {
+    padding: 30px;
+    border: 1px solid #e3e8e4;
+    border-radius: 14px;
+    background: #ffffff;
+    transition: 0.3s ease;
+}
+
+.topic:hover {
+    border-color: #1f7a45;
+    transform: translateY(-5px);
+}
+
+.topic > span {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #1f7a45;
+    font-weight: 800;
+    font-size: 13px;
+}
+
+.topic h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.topic p {
+    color: #68736c;
+    font-size: 14px;
+}
+
+
+/* ================= RESEARCH METHOD ================= */
+
+.method {
+    background: #123d26;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.method-content {
+    max-width: 600px;
+}
+
+.method-content h2 {
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.08;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+.method-content h2 span {
+    color: #8bd3a5;
+}
+
+.method-content > p:not(.hero-label) {
+    color: #c7d5cc;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.method-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.method-list div {
+    padding: 18px 20px;
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255,255,255,0.04);
+}
+
+.method-list strong {
+    color: #8bd3a5;
+    font-size: 13px;
+}
+
+.method-list span {
+    color: #e2ebe5;
+    font-size: 14px;
+}
+
+
+/* ================= SOURCES ================= */
+
+.sources {
+    background: #f7f9f6;
+}
+
+.source-grid {
+    max-width: 1150px;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.source-card {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid #e2e8e3;
+}
+
+.source-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.source-card p {
+    color: #68736c;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.source-card a {
+    color: #1f7a45;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.source-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================= RESEARCH CTA ================= */
+
+.research-topics + .method {
+    margin-top: 0;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 950px) {
+
+    .facts-grid,
+    .topic-grid,
+    .source-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .big-question,
+    .method {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .research-hero {
+        min-height: 430px;
+        padding: 70px 5%;
+    }
+
+    .research-hero h1 {
+        font-size: 43px;
+        letter-spacing: -2px;
+    }
+
+    .research-hero p:not(.hero-label) {
+        font-size: 
+        /* =====================================================
+   COUNTRIES PAGE
+   ===================================================== */
+
+.country-section {
+    background: #f7f9f6;
+}
+
+.country-search {
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.country-search input {
+    width: 100%;
+    padding: 17px 20px;
+    border: 1px solid #d7ded8;
+    border-radius: 10px;
+    outline: none;
+    background: white;
+    color: #17231b;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.country-search input:focus {
+    border-color: #1f7a45;
+    box-shadow: 0 0 0 3px rgba(31, 122, 69, 0.08);
+}
+
+.country-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.country-card {
+    text-decoration: none;
+    color: #17231b;
+    background: white;
+    padding: 28px 20px;
+    border: 1px solid #e1e7e2;
+    border-radius: 14px;
+    transition: 0.3s ease;
+}
+
+.country-card:hover {
+    transform: translateY(-5px);
+    border-color: #1f7a45;
+    box-shadow: 0 15px 35px rgba(30, 70, 45, 0.08);
+}
+
+.country-flag {
+    font-size: 42px;
+    margin-bottom: 14px;
+}
+
+.country-card h3 {
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.country-card p {
+    color: #718078;
+    font-size: 13px;
+}
+
+
+/* No search results */
+
+.no-country {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #68736c;
+}
+
+
+/* ================= COUNTRY RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .country-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .country-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .country-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .country-card {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding: 18px;
+    }
+
+    .country-flag {
+        margin: 0;
+        font-size: 34px;
+    }
+
+}
+        
